@@ -1,67 +1,136 @@
-# prof(プロス)
+# prof
+
+<img src="pros.png" style="zoom:50%;" />
 
 
-### これは新しいjavascriptのフレームワークです。
+### This is a new javascript framework.
 
 -----
-## 使い方 
+## v
 
-#### このリポジトリをクローンしてください
+#### Please clone this repository
 
     git@github.com:gutsmine/pros
 
-#### あなたのプロジェクトに埋め込んでください。
+#### Or run the following command in npm
+
+```
+npm install pros
+```
+
+#### Embed it in your project.
 
     <script src="pros.js"></script>
-### もしくは
-    
+### Or
+
     fetch('./pros.js').then(r=>r.text()).then(t=>eval(t))
 
 ----
 
-## 構文
+## syntax
 
 ### html
 
     window.document
-    
-  #### と同じ形になります。
+
+  #### It will be the same shape as
 
     var document = html.input.value;
-    
-### gebi(変数名, 取得する要素のid)
 
-    document.getElementById(data)
-  #### と同じ形になります。
-    
-    
-   ## cli(要素変数, 実行する関数, 引数)
-    要素変数.onclick(function(引数){実行する関数}
-   #### と同じ形になります。 
-   
-   ##### また、引数は、変数で複数指定可能にする予定。
-   
-   ## che(要素変数, 実行する関数, 引数)
-    要素変数.addEventlistener("chenge",(event)=>{
-    関数名(引数)
+### getid(Variable name, Id to get)
+
+#### Gets an element from id.
+
+    var Variable name = document.getElementById(Id to get);
+  #### It will be the same shape as
+
+#### You can use getclass and getname in the same way.
+
+## getidval(Variable name, Id to get)
+
+##### Gets element text from id.
+
+```
+var Variable name = document.getElementById(Id to get).value;
+```
+
+
+
+   ## cli(Element variable, The function to execute, argument)
+
+#### Allows click processing of an element.
+
+    Element variable.onclick(function(argument){The function to execute}
+   #### It will be the same shape as 
+
+   ##### In addition, we plan to make it possible to specify multiple arguments using variables.
+
+   ## che(Element variable, The function to execute, argument)
+
+#### Allows processing when an element changes.
+
+    Element variable.addEventlistener("chenge",(event)=>{
+    Function name(argument)
     })
-   #### と同じ形になります。
-   
-   ## kup(要素変数, 関数名, 引数)
-   
-    要素変数.addEventlistener("keyup",(event)=>{
+   #### It will be the same shape as
+
+   ## kup(Element variable, Function name, argument)
+
+#### Allows processing when a keyboard is pressed within an element.
+
+    Element variable.addEventlistener("keyup",(event)=>{
     if(event.isComposing){
-    関数名(引数)
+    Function name(argument)
     }
     })  
-   #### と同じ形になります。
-   
-   ## inhtm(要素変数, テキスト)
-    要素変数.innerHTML=テキスト;
-   #### と同じ形になります。
- -----
-   現在の開発途中のため、不具合が発生する場合があります。
- 
- このリポジトリはMIT LICENSE (本ライセンス)に基づいてライセンスされます。あなたがこのファイルを使用するためには、本ライセンスに従わなければなりません。本ライセンスのコピーは下記の場所から入手できます。
+   #### It will be the same shape as
+
+   ## inhtm(Element variable, text)
+
+#### Change the text of the element.
+
+    Element variable.innerHTML=text;
+   #### It will be the same shape as
+
+## newobj(Variable name, The text to add)
+
+#### Create a new object variable.
+
+```
+var Variable name = {The text to add};
+```
+
+#### It will be the same shape as
+
+## addobj(Variable name, The text to add)
+
+#### Append to object variable.
+
+```
+Variable name.push(The text to add);
+```
+
+#### It will be the same shape as
+
+#### There are also newlist and addlist.
+
+## mergevar(�ǉ�����ϐ���, �ϐ�1, �ϐ�2)
+
+#### �ϐ��𓝍����܂��B
+
+```
+var Variable name to add = Variable 1 +  Variable 2;
+```
+
+#### It will be the same shape as
+
+-----
+   ### Due to the current development process, problems may occur.
+
+ This repository is licensed under MIT LICENSE (this license). You must comply with this license to use this file. A copy of this license can be obtained from:
 
 https://github.com/gutsmine/pros/blob/master/LICENSE
+
+
+
+![](gutsminemade-by.png)
