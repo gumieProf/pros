@@ -6,7 +6,7 @@
 ### This is a new javascript framework.
 
 -----
-## v
+## How to use
 
 #### Please clone this repository
 
@@ -23,7 +23,7 @@ npm install pros
     <script src="pros.js"></script>
 ### Or
 
-    fetch('./pros.js').then(r=>r.text()).then(t=>eval(t))
+    var # = require('pros');
 
 ----
 
