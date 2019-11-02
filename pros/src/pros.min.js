@@ -20,8 +20,8 @@ eval(func+"("+data+")")
 }
 });
 };
-var kup = function (data, func, data){
-data.addEventlistener("keyup", event=>{
+var kup = function (ele, func, data){
+ele.addEventlistener("keyup", event=>{
 
 if(event.isComposing){
 if(data == null || data == undefined || data==""){
