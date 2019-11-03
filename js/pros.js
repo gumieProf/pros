@@ -1,4 +1,4 @@
-﻿var pros = (){
+﻿var pros = {
  :getid = function(name, data){
 return eval("var" + name+"=document.getElementById("+data+")");
 }
