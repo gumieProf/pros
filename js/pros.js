@@ -1,37 +1,35 @@
-﻿var pros = function(){
-this.html = window.document;
-this.getid = function(name, data){
-eval("var" + name+"=document.getElementById("+data+")");
+﻿exports.getid = function(name, data){
+return eval("var" + name+"=document.getElementById("+data+")");
 }
-this.getclass = function(name, data){
-eval("var" + name+"=document.getElementByClass("+data+")");
-this.getidval = function(name,data){
-eval("var" + name+"=document.getElementById("+data+").value");
+exports.getclass = function(name, data){
+return eval("var" + name+"=document.getElementByClass("+data+")");
+exports.getidval = function(name,data){
+return eval("var" + name+"=document.getElementById("+data+").value");
 }
-this.getname = function(name, data){
-
-eval("var" + name+"=document.getElementByName("+data+")");
-this.getclassval = function(name, datae){
-eval("var" + name+"=document.getElementByClass("+data+").value");
+exports.getname = function(name, data){
+return eval("var" + name+"=document.getElementByName("+data+")");
 }
-this.getnamevalue = function(name, data){
-eval("var" + name+"=document.getElementByName("+data+").value");
+exports.getclassval = function(name, datae){
+return eval("var" + name+"=document.getElementByClass("+data+").value");
 }
-this.loop = function(times, func, arg){
+exports.getnamevalue = function(name, data){
+return eval("var" + name+"=document.getElementByName("+data+").value");
+}
+exports.loop = function(times, func, arg){
 for(var i=0; i=times; ++i){
 if(arg == null || arg == undefined || arg == ""){
-eval(func+"()");
+return eval(func+"()");
 }else{
-eval(func+"("+arg+")");
+return eval(func+"("+arg+")");
   }
  }
 }
-this.cli = function (elem, func, arg){
+exports.cli = function (elem, func, arg){
 elem.onclick=function(){
 if(arg == null || arg == undefined || arg ==""){
-eval(func+"()");
+return eval(func+"()");
 }else{
-eval(func+"("+arg+")");
+return eval(func+"("+arg+")");
   }
  }
 }
@@ -44,36 +42,32 @@ eval(func+"("+arg+")");
   }
  });
 }
-this.kup = function (ele, func, data){
+exports.kup = function (ele, func, data){
 ele.addEventlistener("keyup", event=>{
 if(event.isComposing){
 if(data == null || data == undefined || data==""){
-eval(func+"()");
+return eval(func+"()");
 }else{
-eval(func+"("+data+")");
+return eval(func+"("+data+")");
    }
   }
  });
 }
-this.inhtm = function(data, text){
-data.innerHTML = text;
+exports.inhtm = function(data, text){
+return data.innerHTML = text;
 }
-this.newobj = function(name, data){
-eval("var "+name+"={"+data+"}");
+exports.newobj = function(name, data){
+return eval("var "+name+"={"+data+"}");
 }
-this.addobj = function(name, data){
-eval(name+".push("+data+")");
+exports.addobj = function(name, data){
+return eval(name+".push("+data+")");
 }
-this.newlist = function(name, data){
-eval("var "+name+"=["+data+"];");
+exports.newlist = function(name, data){
+return eval("var "+name+"=["+data+"];");
 }
-this.addlist = function(name, data){
-eval(name+".push("+data+")");
+exports.addlist = function(name, data){
+return eval(name+".push("+data+")");
 }
-this.margevar = function(name, var1, var2){
-eval("var "+name+"="+var1+"+"+var2);
-  }
+exports.margevar = function(name, var1, var2){
+return eval("var "+name+"="+var1+"+"+var2);
  }
-pros.exports = (function() {
-new pros();
-});
