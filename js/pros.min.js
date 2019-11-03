@@ -1,4 +1,5 @@
-﻿var html = window.document;
+﻿module.exports = (function() {
+var html = window.document;
 var getid = function(name, data){ 
 eval("var" + name+"=document.getElementById("+data+")");
 };
@@ -69,4 +70,5 @@ eval(name+".push("+data+")")
 };
 var margevar = function(name, var1, var2){
 eval("var "+name+"="+var1+"+"+var2);
+};
 };
