@@ -1,10 +1,6 @@
-﻿pros.exports = (function() {
-var pros = function(){
-
-
-   this.html = window.document;
+﻿var pros = function(){
+this.html = window.document;
 this.getid = function(name, data){
-
 eval("var" + name+"=document.getElementById("+data+")");
 }
 this.getclass = function(name, data){
@@ -78,4 +74,6 @@ this.margevar = function(name, var1, var2){
 eval("var "+name+"="+var1+"+"+var2);
   }
  }
+pros.exports = (function() {
+return pros;
 });
