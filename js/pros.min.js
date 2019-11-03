@@ -75,5 +75,5 @@ eval("var "+name+"="+var1+"+"+var2);
   }
  }
 pros.exports = (function() {
-return pros;
+new pros();
 });
