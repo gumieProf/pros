@@ -19,7 +19,7 @@ this.getclassval = function(name, datae){
 eval("var" + name+"=document.getElementByClass("+data+").value");
 }
 this.getnamevalue = function(name, data){
-eval("var" + name+"=document.getElementByName("+data+").value");{ 
+eval("var" + name+"=document.getElementByName("+data+").value");
 }
 this.loop = function(times, func, arg){
 for(var i=0; i=times; ++i){
@@ -44,13 +44,12 @@ elem.addEventlistener("change",(event)=>{
 if(arg == null || arg == undefined || arg ==""){
 eval(func+"()");
 }else{
-eval(func+"("+arg+")")
+eval(func+"("+arg+")");
   }
  });
 }
 this.kup = function (ele, func, data){
 ele.addEventlistener("keyup", event=>{
-
 if(event.isComposing){
 if(data == null || data == undefined || data==""){
 eval(func+"()");
@@ -73,7 +72,7 @@ this.newlist = function(name, data){
 eval("var "+name+"=["+data+"];");
 }
 this.addlist = function(name, data){
-eval(name+".push("+data+")")
+eval(name+".push("+data+")");
 }
 this.margevar = function(name, var1, var2){
 eval("var "+name+"="+var1+"+"+var2);
