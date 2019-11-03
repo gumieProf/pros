@@ -91,5 +91,5 @@ var margevar = function(name, var1, var2){
 eval("var "+name+"="+var1+"+"+var2);
 };
 };
-window.pros = window.# = pros;
+window.pros = pros;
 };
