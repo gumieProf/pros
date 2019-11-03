@@ -1,12 +1,37 @@
-﻿module.exports = (function(data1, data2, data3) {
+﻿module.exports = (function() {
+var datas = function(data1, data2){
+this.name = data1;
+this.data = data2;
+this.prototype.get = function(){
+  return this.name;
+  return this.data;
+};
+var pros = function(data1, data2, data3){
+
+
 var html = window.document;
-var getid = eval("var" + data1+"=document.getElementById("+data2+")");
-var getclass = eval("var" + data1+"=document.getElementByClass("+data2+")");
-var getidval = eval("var" + data1+"=document.getElementById("+data2+").value");
-var getname = eval("var" + data1+"=document.getElementByName("+data2+")");
-var getclassval = eval("var" + data1+"=document.getElementByClass("+data2+").value");
-var getnamevalue = function(name, data){ 
-eval("var" + name+"=document.getElementByName("+data+").value");
+var getid = function(){
+new datas(data1, data2);
+eval("var" + datas.name+"=document.getElementById("+datas.data+")");
+};
+var getclass = function(){
+new datas(data1, data2);
+eval("var" + datas.name+"=document.getElementByClass("+datas.data+")");
+};
+var getidval = function(){
+new datas(data1, data2);
+eval("var" + datas.name+"=document.getElementById("+datas.data+").value");
+};
+var getname = function(){
+new datas(data1, data2);
+eval("var" + datas.name+"=document.getElementByName("+datas.data+")");
+var getclassval = function(){
+new datas(data1, data2);
+eval("var" + datas.name+"=document.getElementByClass("+datas.data+").value");
+};
+var getnamevalue = function(){
+new datas(data1, data2);
+eval("var" + datas.name+"=document.getElementByName("+datas.data+").value");{ 
 };
 var loop = function(){
 for(var i=0; i=data1; ++i){
@@ -65,4 +90,6 @@ eval(name+".push("+data+")")
 var margevar = function(name, var1, var2){
 eval("var "+name+"="+var1+"+"+var2);
 };
+};
+window.pros = window.# = pros;
 };
