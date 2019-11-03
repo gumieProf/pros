@@ -23,17 +23,19 @@ npm install pros
     <script src="pros.js"></script>
 ### Or
 
-    var # = require('pros');
+    var pros = require('pros');
 
 ----
 
 ## syntax
 
+#### Add "pros." before the following syntax.
+
 ### html
 
     window.document
 
-  #### It will be the same shape as
+#### It will be the same shape as
 
     var document = html.input.value;
 
@@ -42,7 +44,7 @@ npm install pros
 #### Gets an element from id.
 
     var Variable name = document.getElementById(Id to get);
-  #### It will be the same shape as
+#### It will be the same shape as
 
 #### You can use getclass and getname in the same way.
 
@@ -56,25 +58,25 @@ var Variable name = document.getElementById(Id to get).value;
 
 
 
-   ## cli(Element variable, The function to execute, argument)
+## cli(Element variable, The function to execute, argument)
 
 #### Allows click processing of an element.
 
     Element variable.onclick(function(argument){The function to execute}
-   #### It will be the same shape as 
+#### It will be the same shape as 
 
-   ##### In addition, we plan to make it possible to specify multiple arguments using variables.
+#### In addition, we plan to make it possible to specify multiple arguments using variables.
 
-   ## che(Element variable, The function to execute, argument)
+## che(Element variable, The function to execute, argument)
 
 #### Allows processing when an element changes.
 
     Element variable.addEventlistener("chenge",(event)=>{
     Function name(argument)
     })
-   #### It will be the same shape as
+#### It will be the same shape as
 
-   ## kup(Element variable, Function name, argument)
+## kup(Element variable, Function name, argument)
 
 #### Allows processing when a keyboard is pressed within an element.
 
@@ -83,9 +85,9 @@ var Variable name = document.getElementById(Id to get).value;
     Function name(argument)
     }
     })  
-   #### It will be the same shape as
+#### It will be the same shape as
 
-   ## inhtm(Element variable, text)
+## inhtm(Element variable, text)
 
 #### Change the text of the element.
 
@@ -114,9 +116,9 @@ Variable name.push(The text to add);
 
 #### There are also newlist and addlist.
 
-## mergevar(’Ç‰Á‚·‚é•Ï”–¼, •Ï”1, •Ï”2)
+## mergevar(Variable name to add, variable1, variable2)
 
-#### •Ï”‚ğ“‡‚µ‚Ü‚·B
+#### Integrate variables.
 
 ```
 var Variable name to add = Variable 1 +  Variable 2;
