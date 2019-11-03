@@ -46,7 +46,7 @@ eval(func+"()");
 }else{
 eval(func+"("+arg+")")
   }
- }
+ });
 }
 this.kup = function (ele, func, data){
 ele.addEventlistener("keyup", event=>{
@@ -57,7 +57,7 @@ eval(func+"()");
 }else{
 eval(func+"("+data+")");
   }
- }
+ });
 }
 this.inhtm = function(data, text){
 data.innerHTML = text;
