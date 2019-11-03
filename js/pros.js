@@ -1,66 +1,54 @@
 ﻿module.exports = (function() {
-var datas = function(data1, data2){
-this.name = data1;
-this.data = data2;
-this.prototype.get = function(){
-  return this.name;
-  return this.data;
-};
-var pros = function(data1, data2, data3){
+var pros = function(){
 
 
-var html = window.document;
-var getid = function(){
-new datas(data1, data2);
-eval("var" + datas.name+"=document.getElementById("+datas.data+")");
+   this.html = window.document;
+this.getid = function(name, data){
+
+eval("var" + name+"=document.getElementById("+data+")");
 };
-var getclass = function(){
-new datas(data1, data2);
-eval("var" + datas.name+"=document.getElementByClass("+datas.data+")");
+this.getclass = function(name, data){
+eval("var" + name+"=document.getElementByClass("+data+")");
+this.getidval = function(name,data){
+eval("var" + name+"=document.getElementById("+data+").value");
 };
-var getidval = function(){
-new datas(data1, data2);
-eval("var" + datas.name+"=document.getElementById("+datas.data+").value");
+this.getname = function(name, data){
+
+eval("var" + name+"=document.getElementByName("+data+")");
+this.getclassval = function(name, datae){
+eval("var" + name+"=document.getElementByClass("+data+").value");
 };
-var getname = function(){
-new datas(data1, data2);
-eval("var" + datas.name+"=document.getElementByName("+datas.data+")");
-var getclassval = function(){
-new datas(data1, data2);
-eval("var" + datas.name+"=document.getElementByClass("+datas.data+").value");
+this.getnamevalue = function(name, data){
+eval("var" + name+"=document.getElementByName("+data+").value");{ 
 };
-var getnamevalue = function(){
-new datas(data1, data2);
-eval("var" + datas.name+"=document.getElementByName("+datas.data+").value");{ 
-};
-var loop = function(){
-for(var i=0; i=data1; ++i){
-if(data3 == null || data3 == undefined || data3 == ""){
-eval(data2+"()");
+this.loop = function(times, func, arg){
+for(var i=0; i=times; ++i){
+if(arg == null || arg == undefined || arg == ""){
+eval(func+"()");
 }else{
-eval(data2+"("+data3+")");
+eval(func+"("+arg+")");
 }
 }
 };
-var cli = function (){
-data1.onclick=function(){
-if(data3 == null || data3 == undefined || data3 ==""){
-eval(data2+"()");
+this.cli = function (elem, func, arg){
+elem.onclick=function(){
+if(arg == null || arg == undefined || arg ==""){
+eval(func+"()");
 }else{
-eval(data2+"("+data3+")");
+eval(func+"("+arg+")");
 }
 }
 };
-var cha = function (){
-data1.addEventlistener("change",(event)=>{
-if(data3 == null || data3 == undefined || data3 ==""){
-eval(data2+"()");
+this.cha = function (elem, func, arg){
+elem.addEventlistener("change",(event)=>{
+if(arg == null || arg == undefined || arg ==""){
+eval(func+"()");
 }else{
-eval(data2+"("+data3+")")
+eval(func+"("+arg+")")
 }
 });
 };
-var kup = function (ele, func, data){
+this.kup = function (ele, func, data){
 ele.addEventlistener("keyup", event=>{
 
 if(event.isComposing){
@@ -71,25 +59,23 @@ eval(func+"("+data+")");
   }
  }
 });
-}
-var inhtm = function(data, text){
+this.inhtm = function(data, text){
 data.innerHTML = text;
 };
-var newobj = function(name, data){
+this.newobj = function(name, data){
 eval("var "+name+"={"+data+"}");
 };
-var addobj = function(name, data){
+this.addobj = function(name, data){
 eval(name+".push("+data+")");
 };
-var newlist = function(name, data){
+this.newlist = function(name, data){
 eval("var "+name+"=["+data+"];");
 };
-var addlist = function(name, data){
+this.addlist = function(name, data){
 eval(name+".push("+data+")")
 };
-var margevar = function(name, var1, var2){
+this.margevar = function(name, var1, var2){
 eval("var "+name+"="+var1+"+"+var2);
 };
 };
-window.pros = pros;
 };
