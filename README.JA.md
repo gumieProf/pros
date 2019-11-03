@@ -23,7 +23,7 @@ npm install pros
     <script src="pros.js"></script>
 ### もしくは
 
-    fetch('./pros.js').then(r=>r.text()).then(t=>eval(t))
+    var pros = require('pros');
 
 ----
 
