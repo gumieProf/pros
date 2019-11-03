@@ -27,8 +27,8 @@ if(arg == null || arg == undefined || arg == ""){
 eval(func+"()");
 }else{
 eval(func+"("+arg+")");
-}
-}
+  }
+ }
 }
 this.cli = function (elem, func, arg){
 elem.onclick=function(){
@@ -36,8 +36,8 @@ if(arg == null || arg == undefined || arg ==""){
 eval(func+"()");
 }else{
 eval(func+"("+arg+")");
-}
-}
+  }
+ }
 }
 this.cha = function (elem, func, arg){
 elem.addEventlistener("change",(event)=>{
@@ -45,8 +45,8 @@ if(arg == null || arg == undefined || arg ==""){
 eval(func+"()");
 }else{
 eval(func+"("+arg+")")
-}
-}
+  }
+ }
 }
 this.kup = function (ele, func, data){
 ele.addEventlistener("keyup", event=>{
@@ -76,6 +76,6 @@ eval(name+".push("+data+")")
 }
 this.margevar = function(name, var1, var2){
 eval("var "+name+"="+var1+"+"+var2);
-}
-}
-}
+  }
+ }
+});
