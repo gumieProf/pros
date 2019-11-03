@@ -56,6 +56,7 @@ if(data == null || data == undefined || data==""){
 eval(func+"()");
 }else{
 eval(func+"("+data+")");
+   }
   }
  });
 }
