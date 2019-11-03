@@ -1,4 +1,4 @@
-﻿module.exports = (function() {
+﻿pros.exports = (function() {
 var pros = function(){
 
 
