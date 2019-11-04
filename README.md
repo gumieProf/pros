@@ -37,8 +37,6 @@ npm install pros
 
 #### It will be the same shape as
 
-    var document = html.input.value;
-
 ### getid(Variable name, Id to get)
 
 #### Gets an element from id.
@@ -48,17 +46,7 @@ npm install pros
 
 #### You can use getclass and getname in the same way.
 
-## getidval(Variable name, Id to get)
-
-##### Gets element text from id.
-
-```
-var Variable name = document.getElementById(Id to get).value;
-```
-
-
-
-## cli(Element variable, The function to execute, argument)
+## click(Element variable, The function to execute, argument)
 
 #### Allows click processing of an element.
 
@@ -67,7 +55,7 @@ var Variable name = document.getElementById(Id to get).value;
 
 #### In addition, we plan to make it possible to specify multiple arguments using variables.
 
-## che(Element variable, The function to execute, argument)
+## change(Element variable, The function to execute, argument)
 
 #### Allows processing when an element changes.
 
@@ -76,7 +64,7 @@ var Variable name = document.getElementById(Id to get).value;
     })
 #### It will be the same shape as
 
-## kup(Element variable, Function name, argument)
+## keyup(Element variable, Function name, argument)
 
 #### Allows processing when a keyboard is pressed within an element.
 
@@ -87,7 +75,7 @@ var Variable name = document.getElementById(Id to get).value;
     })  
 #### It will be the same shape as
 
-## inhtm(Element variable, text)
+## inhtml(Element variable, text)
 
 #### Change the text of the element.
 
@@ -135,4 +123,4 @@ https://github.com/gutsmine/pros/blob/master/LICENSE
 
 
 
-![](gutsminemade-by.png)
+<img src="gutsminemade-by.png" style="zoom:50%;" />

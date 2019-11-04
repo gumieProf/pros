@@ -48,17 +48,7 @@ npm install pros
 
 #### getclass、getnameも同様に使えます。
 
-## getidval(変数名, 取得するid)
-
-##### idから要素のテキストを取得します。
-
-```
-var 変数名 = document.getElementById(取得するid).value;
-```
-
-
-
-## cli(要素変数, 実行する関数, 引数)
+## click(要素変数, 実行する関数, 引数)
 
 #### 要素をクリック処理できるようにします。
 
@@ -67,7 +57,7 @@ var 変数名 = document.getElementById(取得するid).value;
 
 ##### また、引数は、変数で複数指定可能にする予定です。
 
-## che(要素変数, 実行する関数, 引数)
+## chage(要素変数, 実行する関数, 引数)
 
 #### 要素が変更されたら処理できるようにします。
 
@@ -76,7 +66,7 @@ var 変数名 = document.getElementById(取得するid).value;
     })
 #### と同じ形になります。
 
-## kup(要素変数, 関数名, 引数)
+## keyup(要素変数, 関数名, 引数)
 
 #### 要素内でキーボードが押されたら処理できるようにします。
 
@@ -87,7 +77,7 @@ var 変数名 = document.getElementById(取得するid).value;
     })  
 #### と同じ形になります。
 
-## inhtm(要素変数, テキスト)
+## html(要素変数, テキスト)
 
 #### 要素のテキストを変更します。
 
@@ -135,4 +125,4 @@ https://github.com/gutsmine/pros/blob/master/LICENSE
 
 
 
-![](gutsminemade-by.png)
+<img src="gutsminemade-by.png" style="zoom:50%;" />
