@@ -2,7 +2,7 @@
 
 <img src="pros.png" style="zoom:50%;" />
 
-<img src="https://badgen.net/bundlephobia/min/pros">
+<img src="https://badgen.net/bundlephobia/min/pros"> <img src="https://img.shields.io/npm/dt/pros">
 
 ### これは新しいjavascriptのフレームワークです。
 
