@@ -2,6 +2,8 @@
 
 <img src="pros.png" style="zoom:50%;" />
 
+<img src="https://badgen.net/bundlephobia/min/pros">
+
 
 ### This is a new javascript framework.
 
