@@ -1,4 +1,4 @@
-# prof
+# pros
 
 <img src="pros.png" style="zoom:50%;" />
 
