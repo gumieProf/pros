@@ -25,138 +25,103 @@ usage "pros(data).property"
 */
 
 class value {
-  constructor(data1) {
-    this.data1=data1;
-  }
-idvalue(){
 
-  var data = this.data1;
-  return eval('document.getElementById('+data+")");
+static idvalue(data){
+
+  return document.getElementById(data);
 
 }
 
-classvalue(){
+static classvalue(data){
 
-  var data = this.data1;
-  return eval('document.getElementByClass('+data+")");
+  return document.getElementByClass(data);
 }
-namevalue(){
+static namevalue(data){
 
-  var data = this.data1;
-  return eval('document.getElementByName('+data+")");
+  return document.getElementByName(data);
   }
  }
 
  class pros{
-   constructor(data1, data2, data3){
-     this.data1 = data1;
-     this.data2 = data2;
-     this.data3 = data3;
-   }
- getid(){
-   var data = this.data1;
-  return eval("document.getElementById('"+data+"')");
+ static getid(data){
+  return document.getElementById(data);
 }
-  getclass(){
-    var data = this.data1;
-   return eval("document.getElementByClass('"+data+"')");
+  static getclass(data){
+   return document.getElementByclass(data);
 }
- getname(){
-   var data = this.data1;
-   return eval("document.getElementByName('"+data+"')");
+ static getname(data){
+   document.getElementByname(data);
 }
- loop(){
-   var times = this.data1;
-   var func = this.data2;
-   var arg = this.data3;
+ static loop(times, func, arg){
  for(var i=0; i=times; ++i){
  if(arg == null || arg == undefined || arg == ""){
-   eval(func+"()");
+   func();
 }else{
-   eval(func+"("+arg+")");
+   func(arg);
   }
  }
 }
- click(){
-   var elem = this.data1;
-   var func = this.data2;
-   var arg = this.data3;
+ static click(elem, func, arg){
 elem.onclick=function(){
   if(arg == null || arg == undefined || arg ==""){
-   eval(func+"()");
+   func();
 }else{
-   eval(func+"("+arg+")");
+   func(arg);
   }
  }
 }
- change(){
-   var elem = this.data1;
-   var func = this.data2;
-   var arg = this.data3;
+ static change(elem, func, arg){
  elem.addEventlistener("change",(event)=>{
  if(arg == null || arg == undefined || arg ==""){
-   eval(func+"()");
+   func();
 }else{
-   eval(func+"("+arg+")");
+   func(arg);
   }
  });
 }
- keyup(){
-   var elem = this.data1;
-   var func = this.data2;
-   var arg = this.data3;
+ static keyup(elem, func, arg){
  elem.addEventlistener("keyup", event=>{
  if(event.isComposing){
  if(data == null || data == undefined || data==""){
-   eval(func+"()");
+   func();
 }else{
-   eval(func+"("+data+")");
+   func(arg);
    }
   }
  });
 }
- inhtml(){
-   var data = this.data1;
-   var text = this.data2;
+ static inhtml(data, text){
    data.innerHTML = text;
 }
- newobj(){
+ static newobj(name, data){
+   return {data};
+}
+ static addvar(name, data){
+   return name.push(data)
+}
+ static newlist(name, data){
    var name = this.data1;
    var data = this.data2;
-   eval(name+"={"+data+"}");
+   return [data];
 }
- addobj(){
-   var name = this.data1;
-   var data = this.data2;
-   eval(name+".push("+data+")");
-}
- newlist(){
-   var name = this.data1;
-   var data = this.data2;
-   eval(name+"=["+data+"];");
-}
- addlist(){
-   var name = this.data1;
-   var data = this.data2;
-   eval(name+".push("+data+")");
-}
- margevar(){
+ static margevar(name, var1, var2){
    var name = this.data1;
    var var1 = this.data2;
    var var2 = this.data3;
-  return eval(var1+"+"+var2);
+  return var1 + var2;
  }
- getvalue(){
- var data1 = this.data1;
- var data2 = this.data2;
- var type = this.data3;
+ static getvalue(data, type){
  if(type='id'){
- return value(data1, data2).getid;
+ return value.idvalue(data);
 }else if(type='class'){
- return value(data1, data2).getclass;
+return value.classvalue(data);
 }else if(type='name'){
- return value(data1, data2).getname;
+return value.namevalue(data);
    }
   }
  }
-module.exports = new pros();
+var isNode = (typeof process !== "undefined" && typeof require !== "undefined");
+
+if ( isNode) {
+  module.exports = new pros();
+}
