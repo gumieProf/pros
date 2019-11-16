@@ -8,7 +8,7 @@
 ### This is a new javascript framework.
 
 -----
-## How to use
+## usage
 
 #### Please clone this repository
 
@@ -31,28 +31,22 @@ npm install pros
 
 ## syntax
 
-#### Add "pros." before the following syntax.
+#### Enter in the form 'pros. (argument)'.
 
-### html
-
-    window.document
-
-#### It will be the same shape as
-
-### getid(Variable name, Id to get)
+### getid(Variable name, id)
 
 #### Gets an element from id.
 
-    var Variable name = document.getElementById(Id to get);
+    var name = document.getElementById(id);
 #### It will be the same shape as
 
 #### You can use getclass and getname in the same way.
 
-## click(Element variable, The function to execute, argument)
+## click(Element variable, Function name)
 
 #### Allows click processing of an element.
 
-    Element variable.onclick(function(argument){The function to execute}
+    Element variable.onclick(function(){Function name(argument)}
 #### It will be the same shape as 
 
 #### In addition, we plan to make it possible to specify multiple arguments using variables.
@@ -94,7 +88,9 @@ var Variable name = {The text to add};
 
 #### It will be the same shape as
 
-## addobj(Variable name, The text to add)
+#### There are also newlist.
+
+## addvar(Variable name, The text to add)
 
 #### Append to object variable.
 
@@ -104,17 +100,37 @@ Variable name.push(The text to add);
 
 #### It will be the same shape as
 
-#### There are also newlist and addlist.
+#### 
 
-## mergevar(Variable name to add, variable1, variable2)
+## mergevar(variable1, variable2)
 
 #### Integrate variables.
 
 ```
-var Variable name to add = Variable 1 +  Variable 2;
+var Variable name = Variable 1 +  Variable 2;
 ```
 
 #### It will be the same shape as
+
+
+
+#### getvalue(element, Acquisition method {id, class and name})
+
+#### Get the value value of some elements.
+
+```
+var Variable name = document.getElementBy〇〇(element);
+```
+
+
+
+##### Please input as follows for elements that get elements such as getname, getid, getclass, and variables related to addvar, newlist, newobj, margevar.
+
+```
+var Variable name = pros.property(argument);
+```
+
+
 
 -----
    ### Due to the current development process, problems may occur.

@@ -30,17 +30,11 @@ npm install pros
 
 ## 構文
 
-### 以下の構文の前に"pros."を付けてください。
+### 以下の構文は"pros.〇〇(引数)"をという形で入力してください。
 
-### html
 
-    window.document
 
-#### と同じ形になります。
-
-    var document = html.input.value;
-
-### getid(変数名, 取得する要素のid)
+### getid(取得する要素のid)
 
 #### idから要素を取得します。
 
@@ -55,8 +49,6 @@ npm install pros
 
     要素変数.onclick(function(引数){実行する関数}
 #### と同じ形になります。 
-
-##### また、引数は、変数で複数指定可能にする予定です。
 
 ## chage(要素変数, 実行する関数, 引数)
 
@@ -85,7 +77,7 @@ npm install pros
     要素変数.innerHTML=テキスト;
 #### と同じ形になります。
 
-## newobj(変数名, 追加するテキスト)
+## newobj(追加するテキスト)
 
 新しいオブジェクト変数を作成します。
 
@@ -95,7 +87,7 @@ var 変数名 = {追加するテキスト};
 
 #### と同じ形になります。
 
-## addobj(変数名, 追加するテキスト)
+## addobj(追加するテキスト)
 
 #### オブジェクト変数に追加します。
 
@@ -107,7 +99,7 @@ var 変数名 = {追加するテキスト};
 
 #### newlistやaddlistもあります。
 
-## mergevar(追加する変数名, 変数1, 変数2)
+## mergevar(変数1, 変数2)
 
 #### 変数を統合します。
 
@@ -116,6 +108,24 @@ var 追加する変数名 = 変数1 +  変数2;
 ```
 
 #### と同じ形になります。
+
+### getvalue(要素名, 取得方法 {idやclass、name})
+
+#### 要素のvalue値を取得します。
+
+```
+var Variable name = document.getElementBy〇〇(element);
+```
+
+----
+
+##### getidやgetclass、getnameのような要素を取得するものや、addvarやnewlist、newobj、margevarのような変数関係のものは以下のように入力してください。
+
+```
+var 変数名 = pros.プロパティ(引数);
+```
+
+
 
 -----
 ### 現在の開発途中のため、不具合が発生する場合があります。
