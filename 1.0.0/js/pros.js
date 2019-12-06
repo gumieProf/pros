@@ -23,6 +23,7 @@ SOFTWARE.*/
 /*pros prototype
 usage "pros(data).property"
 */
+var count = 0;
 
 class value {
 
@@ -43,6 +44,12 @@ static namevalue(data){
  }
 
  class pros{
+   static doc(){
+    return document;
+  }
+  static win(data){
+   return window;
+ }
  static getid(data){
   return document.getElementById(data);
 }
@@ -93,21 +100,16 @@ elem.onclick=function(){
  static inhtml(data, text){
    data.innerHTML = text;
 }
- static newobj(name, data){
+ static newobj(data){
    return {data};
 }
- static addvar(name, data){
+ static addvar(data){
    return name.push(data)
 }
- static newlist(name, data){
-   var name = this.data1;
-   var data = this.data2;
+ static newlist(data){
    return [data];
 }
- static margevar(name, var1, var2){
-   var name = this.data1;
-   var var1 = this.data2;
-   var var2 = this.data3;
+ static margevar(var1, var2){
   return var1 + var2;
  }
  static getvalue(data, type){
@@ -119,6 +121,23 @@ return value.classvalue(data);
 return value.namevalue(data);
    }
   }
+  static makeCV(data){
+    var isCanvas = document.createElement('canvas')
+    if(isCanvas && data=null || isCanvas && data=undefined || isCanvas){
+      var canvas = document.createElement('canvas');
+      var count = count+1;
+      canvas.className = 'canvas'+count;
+      document.getElementsByTagName("head").appendChild(canvas);
+canvas2 = document.getElementByClass('canvas'+count);
+      var ctx = canvas2.getContext('2d');
+
+    }else{
+      canvas = document.getElementByClass(data);
+            var ctx = canvas.getContext('2d');
+
+    }
+   return document.getElementById(data);
+ }
  }
 var isNode = (typeof process !== "undefined" && typeof require !== "undefined");
 

@@ -4,10 +4,10 @@
 
 <img src="https://badgen.net/bundlephobia/min/pros"> <img src="https://img.shields.io/npm/dt/pros">
 
-### これは新しいjavascriptのフレームワークです。
+### これは新しいjavascriptのフレームワーク
 
 -----
-## 使い方 
+## 使い方
 
 #### このリポジトリをクローンしてください
 
@@ -48,7 +48,7 @@ npm install pros
 #### 要素をクリック処理できるようにします。
 
     要素変数.onclick(function(引数){実行する関数}
-#### と同じ形になります。 
+#### と同じ形になります。
 
 ## chage(要素変数, 実行する関数, 引数)
 
