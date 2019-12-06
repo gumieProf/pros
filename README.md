@@ -100,7 +100,7 @@ Variable name.push(The text to add);
 
 #### It will be the same shape as
 
-#### 
+
 
 ## mergevar(variable1, variable2)
 
@@ -114,12 +114,23 @@ var Variable name = Variable 1 +  Variable 2;
 
 
 
-#### getvalue(element, Acquisition method {id, class and name})
+## getvalue(element, Acquisition method {id, class and name})
 
-#### Get the value value of some elements.
+Get the value value of some elements.
 
 ```
 var Variable name = document.getElementBy〇〇(element);
+```
+
+
+
+## makeCV(data)
+
+Enable the canvas.
+
+```
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getcontext('2d');
 ```
 
 
