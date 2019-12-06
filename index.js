@@ -1,2 +1,2 @@
-var prosModule = require('./js/pros');
+var prosModule = require('./js/pros.js');
 module.exports = prosModule;
