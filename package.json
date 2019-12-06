@@ -1,6 +1,6 @@
 {
   "name": "pros",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "This is a new javascript framework.",
   "main": "index.js",
   "author": "gutsmine",
@@ -13,5 +13,7 @@
   "bugs": {
     "url": "https://github.com/gutsmine/pros/issues"
   },
-"publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
