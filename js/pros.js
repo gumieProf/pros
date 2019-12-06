@@ -139,8 +139,4 @@ canvas2 = document.getElementByClass('canvas'+count);
    return document.getElementById(data);
  }
  }
-var isNode = (typeof process !== "undefined" && typeof require !== "undefined");
-
-if ( isNode) {
   module.exports = new pros();
-}
