@@ -1,7 +1,7 @@
 {
   "name": "pros",
   "bin": "js/pros",
-  "version": "1.2.15",
+  "version": "1.2.16",
   "description": "This is a new javascript framework.",
   "main": "index.js",
   "author": "gutsmine",
