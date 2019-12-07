@@ -2,7 +2,7 @@
 
 <img src="pros.png" style="zoom:50%;" />
 
-<img src="https://badgen.net/bundlephobia/min/pros"> <img src="https://img.shields.io/npm/dt/pros">
+[![install size](https://packagephobia.now.sh/badge?p=pros)](https://packagephobia.now.sh/result?p=pros) <img src="https://img.shields.io/npm/dt/pros">
 
 ### これは新しいjavascriptのフレームワーク
 
