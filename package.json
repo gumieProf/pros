@@ -13,5 +13,8 @@
   "homepage": "https://github.com/gutsmine/pros#readme",
   "bugs": {
     "url": "https://github.com/gutsmine/pros/issues"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
   }
 }

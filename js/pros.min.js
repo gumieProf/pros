@@ -23,120 +23,88 @@ SOFTWARE.*/
 /*pros prototype
 usage "pros(data).property"
 */
-var count = 0;
 
-class value {
-
-static idvalue(data){
-
-  return document.getElementById(data);
-
-}
-
-static classvalue(data){
-
-  return document.getElementByClass(data);
-}
-static namevalue(data){
-
-  return document.getElementByName(data);
-  }
- }
-
- class pros{
-   static doc(){
+class pros {
+  static doc() {
     return document;
   }
-  static win(data){
-   return window;
- }
- static getid(data){
-  return document.getElementById(data);
-}
-  static getclass(data){
-   return document.getElementByclass(data);
-}
- static getname(data){
-   document.getElementByname(data);
-}
- static loop(times, func, arg){
- for(var i=0; i=times; ++i){
- if(arg == null || arg == undefined || arg == ""){
-   func();
-}else{
-   func(arg);
+  static win() {
+    return window;
   }
- }
-}
- static click(elem, func, arg){
-elem.onclick=function(){
-  if(arg == null || arg == undefined || arg ==""){
-   func();
-}else{
-   func(arg);
+  static getid(data) {
+    return document.getElementById(data);
   }
- }
-}
- static change(elem, func, arg){
- elem.addEventlistener("change",(event)=>{
- if(arg == null || arg == undefined || arg ==""){
-   func();
-}else{
-   func(arg);
+  static getclass(data) {
+    return document.getElementByclass(data);
   }
- });
-}
- static keyup(elem, func, arg){
- elem.addEventlistener("keyup", event=>{
- if(event.isComposing){
- if(data == null || data == undefined || data==""){
-   func();
-}else{
-   func(arg);
-   }
+  static getname(data) {
+    document.getElementByname(data);
   }
- });
-}
- static inhtml(data, text){
-   data.innerHTML = text;
-}
- static newobj(data){
-   return {data};
-}
- static addvar(data){
-   return name.push(data)
-}
- static newlist(data){
-   return [data];
-}
- static margevar(var1, var2){
-  return var1 + var2;
- }
- static getvalue(data, type){
- if(type='id'){
- return value.idvalue(data);
-}else if(type='class'){
-return value.classvalue(data);
-}else if(type='name'){
-return value.namevalue(data);
-   }
-  }
-  static makeCV(data){
-    var isCanvas = document.createElement('canvas')
-    if(isCanvas && data=null || isCanvas && data=undefined || isCanvas){
-      var canvas = document.createElement('canvas');
-      var count = count+1;
-      canvas.className = 'canvas'+count;
-      document.getElementsByTagName("head").appendChild(canvas);
-canvas2 = document.getElementByClass('canvas'+count);
-      var ctx = canvas2.getContext('2d');
-
-    }else{
-      canvas = document.getElementByClass(data);
-            var ctx = canvas.getContext('2d');
-
+  static loop(times, func, arg) {
+    for (var i = 0; (i = times); ++i) {
+      if (arg === null || typeof arg === undefined || arg === "") {
+        func();
+      } else {
+        func(arg);
+      }
     }
-   return document.getElementById(data);
- }
- }
-  module.exports = new pros();
+  }
+  static click(elem, func, arg) {
+    elem.onclick = function() {
+      if (arg === null || typeof arg === undefined || arg === "") {
+        func();
+      } else {
+        func(arg);
+      }
+    };
+  }
+  static change(elem, func, arg) {
+    elem.addEventlistener("change", function() {
+      if (arg === null || typeof arg === undefined || arg === "") {
+        func();
+      } else {
+        func(arg);
+      }
+    });
+  }
+  static keyup(elem, func, arg) {
+    elem.addEventlistener("keyup", event => {
+      if (event.isComposing) {
+        if (arg === null || typeof arg === undefined || arg === "") {
+          func();
+        } else {
+          func(arg);
+        }
+      }
+    });
+  }
+  static inhtml(data, text) {
+    data.innerHTML = text;
+  }
+  static newobj(data) {
+    return { data };
+  }
+  static addvar(data) {
+    return name.push(data);
+  }
+  static newlist(data) {
+    return [data];
+  }
+  static margevar(var1, var2) {
+    return var1 + var2;
+  }
+  static getvalue(data, type) {
+    if (type == "id") {
+      return document.getElementById(data).value;
+    } else if (type == "class") {
+      return document.getElementsByClassName(data).value;
+    } else if (type == "name") {
+      return document.getElementsByName(data).value;
+    }
+  }
+}
+class ps extends pros {}
+module.exports = {
+  pros: new pros(),
+  ps: new ps()
+};
